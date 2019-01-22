@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Aurocore - Customer Data Platform</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="../assets/node_modules/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="css/watsons_custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Aurocore</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                       
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Admin &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Business-ManWoman"></i><span class="hide-menu">Customer Profile</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-person.html">Profile</a></li>  
+                                    <li><a href="person-grouping.html">Customer Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Hipster-Glasses3"></i><span class="hide-menu">Guest Profile <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-guest.html">Guest Profile  </a></li>
+                                    <li><a href="guest-grouping.html">Guest Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">Data Pipeline <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="pipeline-regular-import.html">Import  </a></li>
+                                    <li><a href="pipeline-endpoint.html">Endpoint</a></li>
+                                    <li><a href="pipeline-history-model.html">History Model Report</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Double-Circle"></i><span class="hide-menu">Audience</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="audience-contact.html">Audience Segment</a></li>
+                                    <!--
+                                         <li><a href="audience-contact2.html">Audience Grid</a></li>
+                                    -->
+                                    <li><a href="person-attributes.html">Attributes</a></li>
+                                    <li><a href="person-charts.html">Analyze Chart</a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                            
+                           
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                    
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-xlg-2 col-lg-3 col-md-5">
+                                <div class="card-body inbox-panel"><a href="#" class="btn btn-info m-b-20 p-10 btn-block waves-effect waves-light group_list_fnt" data-toggle="modal" data-target="#modalTable" >Select Group Attributes</a>
+                                    <ul class="list-group list-group-full">
+                                        <li class="list-group-item active"> <a href="javascript:void(0)" class="group_list_fnt"><i class="mdi mdi-calendar-multiple-check"></i>  Labels  </a></li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-info m-r-10"></i> Transaction  </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-warning m-r-10"></i> Engagement  </a>
+                                        <li class="list-group-item ">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-purple m-r-10"></i> Profile  </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-success m-r-10"></i> Third Party  </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-danger m-r-10"></i> Group  </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xlg-10 col-lg-9 col-md-7 bg-light-part b-l">
+                                
+
+                                <div class="card-body p-t-30">
+                                        <div class="card b-all shadow-none">
+                                            <div class="inbox-center table-responsive">
+                                                <table class="table table-hover no-wrap">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th >
+                                                                <div class="checkbox">
+                                                                        <input type="checkbox" id="checkbox0" value="check">
+                                                                        <label for="checkbox0"></label>
+                                                                </div>
+                                                            </th>
+                                                            
+                                                            <th class="text-center">Cookies ID</th>
+                                                            <th class="text-center"> Lable</th>
+                                                            <th class="text-center"> Group</th>
+                                                            <th class="text-center"> Profile</th>
+                                                            <th class="text-center"> Timestamp</th>
+
+                                                        </tr>
+                                                        
+                                                        <tr class="unread">
+                                                            <td style="width:40px">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox0" value="check">
+                                                                    <label for="checkbox0"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD184725</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">Google ADS</span> </td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">Search</span></td>
+                                                            <td class="text-center"> <a href="indivual-person.html"><i class="fa fa-paperclip"></i></a></td>
+                                                            <td class="text-center">2018/08/01 </td>
+                                                        </tr>
+                                                        <tr class="unread">
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox1" value="check">
+                                                                    <label for="checkbox1"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">AD314656</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">FacebookAD</span></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">FB</span><span class="label label-danger m-r-10">Guest</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center">2018/08/17</td>
+                                                        </tr>
+                                                        <tr class="unread">
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox2" value="check">
+                                                                    <label for="checkbox2"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD788759</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">FacebookAD</span><a href="#"><span class="label label-success">Facebook</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">FB</span><span class="label label-danger m-r-10">Guest</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/08/17 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox3" value="check">
+                                                                    <label for="checkbox3"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD479665</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span><span class="label label-warning">Email</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">RTP</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/08/22 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox4" value="check">
+                                                                    <label for="checkbox4"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD527817</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span><span class="label label-info m-r-10">EC Order</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest </span><span class="label label-danger m-r-10">RTP</span>  </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center">2018/08/22 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox5" value="check">
+                                                                    <label for="checkbox5"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD891793</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">FacebookAD</span></td>
+                                                            <td class="text-left"> <span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">FB</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center">2018/08/22 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox6" value="check">
+                                                                    <label for="checkbox6"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD191310</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">FacebookAD</span><a href="#"><span class="label label-success">Facebook</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">FB</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/08/22 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox7" value="check">
+                                                                    <label for="checkbox7"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD11947</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span><span class="label label-warning">Email</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">RTP</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/08/22</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox8" value="check">
+                                                                    <label for="checkbox8"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD741092</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">RTP</span><span class="label label-danger m-r-10">Guest</span>  </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/09/15 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox9" value="check">
+                                                                    <label for="checkbox9"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD393318</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">Doublick Click</span></td>
+                                                            <td class="text-left"> <span class="label label-danger m-r-10">RTP</span><span class="label label-danger m-r-10">Guest</span></td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/09/15 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox10" value="check">
+                                                                    <label for="checkbox10"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD638633</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">FacebookAD</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">FB</span></td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center">2018/09/15 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox11" value="check">
+                                                                    <label for="checkbox11"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD119726</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">Doublick Click</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span><span class="label label-danger m-r-10">RTP</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/09/26 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox m-t-0 m-b-0">
+                                                                    <input type="checkbox" id="checkbox12" value="check">
+                                                                    <label for="checkbox12"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD189656</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span><span class="label label-success">Facebook</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">RTP</span><span class="label label-danger m-r-10">Guest</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/09/27 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox13" value="check">
+                                                                    <label for="checkbox13"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD105239</td>
+                                                            <td class="text-left"><span class="label label-purple m-r-10">Doublick Click</span></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span> <span class="label label-danger m-r-10">RTP</span></td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center"> 2018/09/27 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox14" value="check">
+                                                                    <label for="checkbox14"></label>
+                                                                </div>
+                                                            </td>
+                                                            
+                                                            <td class="text-center">SD701678</td>
+                                                            <td class="text-left"><a href="#"><span class="label label-purple m-r-10">Doublick Click</span><span class="label label-success">Facebook</span> </a></td>
+                                                            <td class="text-left"><span class="label label-danger m-r-10">Guest</span><span class="label label-danger m-r-10">40 Gens</span> </td>
+                                                            <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                            <td class="text-center">2018/10/19 </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Modal-->
+            <div   class="modal fade " id="modalTable" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                    <h3 class="modal-title">Attribute List</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                
+                            </div>
+                            <div class="modal-body">
+                                
+                                <table data-toggle="table" 
+                                data-url="../assets/node_modules/bootstrap-table/bootstrap-attribute.json" 
+                                data-pagination="true"
+                                data-search="true"
+                                data-click-to-select="true" 
+                                data-height="500">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="state" data-checkbox="true"></th>
+                                            <th data-field="id">ID</th>
+                                            <th data-field="Category">Category </th>
+                                            <th data-field="Type">Type</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                    <a href="person-grouping-1.html" class="btn btn-danger waves-effect text-left" >Next</a>
+                                    <!--
+                                        <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal"> <a href=""></a> Create </button>
+                                    -->
+                                    
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+            
+
+           <!-- End Modal  -->
+            </div>
+            
+            <footer class="footer"> © 2018 Aurocore by Aurocore.net </footer>
+            
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../assets/node_modules/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+
+
+    <!--c3 JavaScript -->
+    <script src="../assets/node_modules/d3/d3.min.js"></script>
+    <script src="../assets/node_modules/c3-master/c3.min.js"></script>
+    <script src="../assets/node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script src="../assets/node_modules/bootstrap-table/dist/bootstrap-table.ints.js"></script>
+    <!-- Popup message jquery -->
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+ 
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/styleswitcher/jQuery.style.switcher.js"></script>
+    <script>
+    $('#modalTable').on('show.bs.modal', function () {
+    $('.modal .modal-body').css('overflow-y', 'auto'); 
+    $('.modal .modal-body').css('max-height', $(window).height() * 0.8);
+});</script>
+</body>
+
+</html>

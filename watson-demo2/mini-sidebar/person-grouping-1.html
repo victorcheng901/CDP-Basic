@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Aurocore - Customer Data Platform</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    
+    <!--c3 CSS -->
+    <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="../assets/node_modules/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../assets/node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css" rel="stylesheet">
+    <link href="../assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link href="../assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="../assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+    <link href="../assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="css/watsons_custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Aurocore</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                       
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Admin &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-info btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Business-ManWoman"></i><span class="hide-menu">Customer Profile</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-person.html">Profile</a></li>  
+                                    <li><a href="person-grouping.html">Customer Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Hipster-Glasses3"></i><span class="hide-menu">Guest Profile <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-guest.html">Guest Profile  </a></li>
+                                    <li><a href="guest-grouping.html">Guest Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">Data Pipeline <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="pipeline-regular-import.html">Import  </a></li>
+                                    <li><a href="pipeline-endpoint.html">Endpoint</a></li>
+                                    <li><a href="pipeline-history-model.html">History Model Report</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Double-Circle"></i><span class="hide-menu">Audience</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="audience-contact.html">Audience Segment</a></li>
+                                    <!--
+                                         <li><a href="audience-contact2.html">Audience Grid</a></li>
+                                    -->
+                                    <li><a href="person-attributes.html">Attributes</a></li>
+                                    <li><a href="person-charts.html">Analyze Chart</a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                            
+                           
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                    <div class="row p-b-20">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-7 align-self-center text-right d-none d-md-block">
+                                
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="btn btn-info text-white">+ Create User Group</a>
+                            </div><br>
+                           
+                        </div>
+                    
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-xlg-2 col-lg-3 col-md-5">
+                                
+                                <div class="card-body inbox-panel"><a href="person-grouping.html" class="btn btn-info m-b-20 p-10 btn-block waves-effect waves-light group_list_fnt" >Select Group Attributes</a>
+                                    <ul class="list-group list-group-full">
+                                            <li class="list-group-item active"> <a href="javascript:void(0)" class="group_list_fnt"><i class="mdi mdi-gmail"></i> Attribute Weighting </a></li>
+                                            <!--
+                                            <li class="list-group-item">
+                                                <a href="javascript:void(0)" class="inboxfnt"> <i class="mdi mdi-star"></i> Gender  </a>
+                                                <div class="custom-control custom-radio">
+                                                    
+                                                        <input type="radio" id="customRadio5" name="member1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadio5">Male</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="customRadio6" name="member1" class="custom-control-input">
+                                                        <label class="custom-control-label " for="customRadio6">Female</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio7" name="member1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio7">Others</label>
+                                                        </div>
+                                            </li>
+                                            -->
+                                            
+                                            <li class="list-group-item">
+                                                    <a href="javascript:void(0)" class="inboxfnt"> <i class="mdi mdi-star"></i> Age  </a>
+                                                    <div id="range_22"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <a href="javascript:void(0)" class="inboxfnt"> <i class="mdi mdi-star"></i> City  </a>
+                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                            
+                                                            <optgroup label="North">
+                                                                <option value="CA">Keelung</option>
+                                                                <option value="NV">Yilan</option>
+                                                                <option value="OR">Taipei</option>
+                                                                <option value="WA">Taoyuan</option>
+                                                                <option value="WA">Hsinchu</option>
+                                                            </optgroup>
+                                                            <optgroup label="Middle">
+                                                                <option value="AZ">Miaoli</option>
+                                                                <option value="CO">Taichung</option>
+                                                                <option value="ID">Nantou</option>
+                                                                <option value="MT">Changhua</option>
+                                                                <option value="NE">Yunlin</option>
+                                                                
+                                                            </optgroup>
+                                                            <optgroup label="South">
+                                                                <option value="AL">Tainan</option>
+                                                                <option value="AR">Kaosiung</option>
+                                                                <option value="IL">Pintong</option>
+                                                                
+                                                            </optgroup>
+                                                            <optgroup label="Eastern ">
+                                                                <option value="CT">Hualian</option>
+                                                                <option value="DE">Taidong</option>
+                                                                <option value="FL">Florida</option>
+                                                                
+                                                            </optgroup>
+                                                        </select>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <a href="javascript:void(0)" class="inboxfnt"> <i class="mdi mdi-star"></i> Category Preferred   </a>
+                                                    <select class="select2 m-b-10 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="Choose">
+                                                            
+                                                            <optgroup label="cosmetics">
+                                                                <option value="CA">facecare</option>
+                                                                <option value="NV">foundation</option>
+                                                                <option value="OR">Cream</option>
+                                                                <option value="WA">Powder</option>
+                                                                <option value="WA">blush-highlighter-concealer</option>
+                                                            </optgroup>
+                                                            <optgroup label="Man">
+                                                                <option value="AZ">Personal-care</option>
+                                                                <option value="CO">Hair</option>
+                                                                <option value="ID">Underwear</option>
+                                                                <option value="MT">Socks</option>
+                                                                <option value="NE">vitamins</option>
+                                                                
+                                                            </optgroup>
+                                                           
+                                                        </select>
+                                                        <div class="p-t-20"></div>
+                                                        <div id="range_02" ></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <a href="javascript:void(0)" class="inboxfnt"> <i class="mdi mdi-star"></i> Tags   </a>
+                                                    <input type="text" value="Young,Coupon lover,Victor" data-role="tagsinput" placeholder="add tags">
+                                            </li>
+                                            
+                                        </ul>
+                                    <ul class="list-group list-group-full p-t-30">
+                                        <li class="list-group-item active"> <a href="javascript:void(0)" class="group_list_fnt"><i class="mdi mdi-calendar-multiple-check"></i>  Labels  </a></li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-info m-r-10"></i> Transaction  </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-warning m-r-10"></i> Engagement  </a>
+                                        <li class="list-group-item ">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-purple m-r-10"></i> Profile  </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:void(0)" class="inboxfnt"> <i class="fa fa-circle text-danger m-r-10"></i> Third Party  </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xlg-10 col-lg-9 col-md-7 bg-light-part b-l ">
+                                
+                               
+                                <div class="card-body p-t-30">
+                                    <div class="card b-all shadow-none">
+                                        <div class="inbox-center table-responsive">
+                                            <table class="table table-hover no-wrap">
+                                                <tbody>
+                                                    <tr>
+                                                        <th >
+                                                            <div class="checkbox">
+                                                                    <input type="checkbox" id="checkbox0" value="check">
+                                                                    <label for="checkbox0"></label>
+                                                            </div>
+                                                        </th>
+                                                        <th class="text-center"> VIP</th>
+                                                        <th class="text-center">Name</th>
+                                                        <th class="text-center"> Lable</th>
+                                                        <th class="text-center"> Group</th>
+                                                        <th class="text-center"> Profile</th>
+                                                        <th class="text-center"> Timestamp</th>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox10" value="check">
+                                                                <label for="checkbox10"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">黃麗俐</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">EC</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">Coupon Users</span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center">2018/09/15 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox11" value="check">
+                                                                <label for="checkbox11"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">李姿喬</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">CRM</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/09/26 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox m-t-0 m-b-0">
+                                                                <input type="checkbox" id="checkbox12" value="check">
+                                                                <label for="checkbox12"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">許哲香</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-success">Facebook</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">40 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/09/27 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox13" value="check">
+                                                                <label for="checkbox13"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star text-warning"></i></td>
+                                                        <td class="text-center">林育卿</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">CRM</span></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">New Users</span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/09/27 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox14" value="check">
+                                                                <label for="checkbox14"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">陳威琪</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-success">Facebook</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">New Users</span><span class="label label-danger m-r-10">40 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center">2018/10/19 </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td style="width:40px">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox0" value="check">
+                                                                <label for="checkbox0"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star text-warning"></i></td>
+                                                        <td class="text-center">張郁翔</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">CRM</span> </td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">New Users</span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"> <i class="fa fa-paperclip"></a></td>
+                                                        <td class="text-center">2018/08/01 </td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox1" value="check">
+                                                                <label for="checkbox1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star text-warning"></i></td>
+                                                        <td class="text-center">蔡良吉</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">EC</span></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">Low Freq</span><span class="label label-danger m-r-10">60 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center">2018/08/17</td>
+                                                    </tr>
+                                                    <tr class="unread">
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox2" value="check">
+                                                                <label for="checkbox2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">王宜君</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">EC</span><a href="#"><span class="label label-success">Facebook</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">High Value</span><span class="label label-danger m-r-10">20 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/08/17 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox3" value="check">
+                                                                <label for="checkbox3"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">陳靜如</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-warning">Email</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">50 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/08/22 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox4" value="check">
+                                                                <label for="checkbox4"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star text-warning"></i></td>
+                                                        <td class="text-center">李麗玟</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-info m-r-10">EC Order</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">High Value </span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center">2018/08/22 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox5" value="check">
+                                                                <label for="checkbox5"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">林秀美</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">EC</span></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center">2018/08/22 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox6" value="check">
+                                                                <label for="checkbox6"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">張凱文</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">EC</span><a href="#"><span class="label label-success">Facebook</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">New Users</span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/08/22 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox7" value="check">
+                                                                <label for="checkbox7"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">賴善偉</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-warning">Email</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">New Users</span><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/08/22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox8" value="check">
+                                                                <label for="checkbox8"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star-o"></i></td>
+                                                        <td class="text-center">蘇辰緯</td>
+                                                        <td class="text-left"><a href="#"><span class="label label-purple m-r-10">CRM</span><span class="label label-info m-r-10">POS</span> </a></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">Promotion Users</span><span class="label label-danger m-r-10">20 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/09/15 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox9" value="check">
+                                                                <label for="checkbox9"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center"><i class="fa fa-star text-warning"></i></td>
+                                                        <td class="text-center">阮萱駿</td>
+                                                        <td class="text-left"><span class="label label-purple m-r-10">CRM</span></td>
+                                                        <td class="text-left"><span class="label label-danger m-r-10">30 Gens</span> </td>
+                                                        <td class="text-center"><i class="fa fa-paperclip"></i></td>
+                                                        <td class="text-center"> 2018/09/15 </td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="myModal" class="modal fade in p-t-30" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">User Group</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Group Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" placeholder="type name"> </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Comment</label>
+                                        <div class="col-md-12">
+                                            <select class="form-control">
+                                                <option>All Contacts</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>Custome</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer"> © 2018 Aurocore by Aurocore.net </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../assets/node_modules/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <script src="../assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="../assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="../assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="../assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
+    <script>
+    jQuery(function() {
+        // Switchery
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        $('.js-switch').each(function() {
+            new Switchery($(this)[0], $(this).data());
+        });
+        // For select 2
+        $(".select2").select2();
+        $('.selectpicker').selectpicker();
+        //Bootstrap-TouchSpin
+        $(".vertical-spin").TouchSpin({
+            verticalbuttons: true,
+            verticalupclass: 'ti-plus',
+            verticaldownclass: 'ti-minus'
+        });
+        var vspinTrue = $(".vertical-spin").TouchSpin({
+            verticalbuttons: true
+        });
+        if (vspinTrue) {
+            $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+        }
+        $("input[name='tch1']").TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%'
+        });
+        $("input[name='tch2']").TouchSpin({
+            min: -1000000000,
+            max: 1000000000,
+            stepinterval: 50,
+            maxboostedstep: 10000000,
+            prefix: '$'
+        });
+        $("input[name='tch3']").TouchSpin();
+        $("input[name='tch3_22']").TouchSpin({
+            initval: 40
+        });
+        $("input[name='tch5']").TouchSpin({
+            prefix: "pre",
+            postfix: "post"
+        });
+        // For multiselect
+        $('#pre-selected-options').multiSelect();
+        $('#optgroup').multiSelect({
+            selectableOptgroup: true
+        });
+        $('#public-methods').multiSelect();
+        $('#select-all').on('click', function() {
+            $('#public-methods').multiSelect('select_all');
+            return false;
+        });
+        $('#deselect-all').on('click', function() {
+            $('#public-methods').multiSelect('deselect_all');
+            return false;
+        });
+        $('#refresh').on('click', function() {
+            $('#public-methods').multiSelect('refresh');
+            return false;
+        });
+        $('#add-option').on('click', function() {
+            $('#public-methods').multiSelect('addOption', {
+                value: 42,
+                text: 'test 42',
+                index: 0
+            });
+            return false;
+        });
+        $(".ajax").select2({
+            ajax: {
+                url: "https://api.github.com/search/repositories",
+                dataType: 'json',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function(data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+                    return {
+                        results: data.items,
+                        pagination: {
+                            more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function(markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+        });
+    });
+    </script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+
+    <!--c3 JavaScript -->
+    <script src="../assets/node_modules/d3/d3.min.js"></script>
+    <script src="../assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <!-- Chart JS -->
+    <script src="../assets/node_modules/ion-rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="../assets/node_modules/ion-rangeslider/js/ion-rangeSlider/ion.rangeSlider-init.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>

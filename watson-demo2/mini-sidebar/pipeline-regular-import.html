@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Aurocore - Customer Data Platform</title>
+    
+    <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <link href="../assets/node_modules/horizontal-timeline/css/horizontal-timeline.css" rel="stylesheet">
+    <!--c3 CSS -->
+    <link href="../assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/node_modules/dropify/dist/css/dropify.min.css">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="css/watsons_custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Aurocore</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                       
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Admin &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Business-ManWoman"></i><span class="hide-menu">Customer Profile</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-person.html">Profile</a></li>  
+                                    <li><a href="person-grouping.html">Customer Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Hipster-Glasses3"></i><span class="hide-menu">Guest Profile <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-guest.html">Guest Profile  </a></li>
+                                    <li><a href="guest-grouping.html">Guest Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">Data Pipeline <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="pipeline-regular-import.html">Import  </a></li>
+                                    <li><a href="pipeline-endpoint.html">Endpoint</a></li>
+                                    <li><a href="pipeline-history-model.html">History Model Report</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Double-Circle"></i><span class="hide-menu">Audience</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="audience-contact.html">Audience Segment</a></li>
+                                    <!--
+                                         <li><a href="audience-contact2.html">Audience Grid</a></li>
+                                    -->
+                                    <li><a href="person-attributes.html">Attributes</a></li>
+                                    <li><a href="person-charts.html">Analyze Chart</a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                            
+                           
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                    <div class="row p-t-30">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-7 align-self-center text-right d-none d-md-block">
+                            <a class="btn btn-info" href="#modeling" role="button"> <h2><i class="fa fa-gear fa-spin"></i> &nbsp Generate Data Model</h2>  </a>
+                            
+                        </div><br>
+                           
+                    </div>
+                    <div class="row p-t-30">
+                        <div class="col-md-12 ">
+                             <h2 id="bannertxt" class="card  text-center p-t-20 p-b-20"><i  class="fa fa-flash " >&nbsp&nbsp Transaction Data</i></h2>
+                        </div>
+                    </div>
+                    <div class="row p-t-30">
+                            
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/transaction.png" alt="user" class=" img-responsive" ></a>
+                                               
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Point of Sale</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/transaction.png" alt="user" class=" img-responsive" ></a>
+                                               
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Ecommerce Orders</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/transaction.png" alt="user" class=" img-responsive" ></a>
+                                               
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Product Hierchy</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/transaction.png" alt="user" class=" img-responsive" ></a>
+                                               
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Inventory</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                           
+                    </div>
+                    <div class="row p-t-60">
+                            <div class="col-md-12 ">
+                                 <h2 id="bannertxt" class="card  text-center p-t-20 p-b-20"><i  class="fa fa-recycle " >&nbsp&nbsp Engagement Data</i></h2>
+                            </div>
+                    </div>
+                    <div class="row p-t-30">
+                            
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/engaement.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Email Marketing</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/engaement.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Web Behavior</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/engaement.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Mobile Application</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/engaement.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Call Center</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                    </div>
+                    <div class="row p-t-60">
+                            <div class="col-md-12 ">
+                                 <h2 id="bannertxt" class="card  text-center p-t-20 p-b-20"><i  class="fa fa-users " >&nbsp&nbsp Profile Data</i></h2>
+                            </div>
+                    </div>
+                    <div class="row p-t-30">
+                            
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/profile.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Loyalty Management</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/profile.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Transaction History</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/profile.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Customer Profile</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/profile.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Review / Comment</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                    </div>
+                    <div class="row p-t-60">
+                            <div class="col-md-12 ">
+                                 <h2 id="bannertxt" class="card  text-center p-t-20 p-b-20"><i  class="fa fa-share-alt-square " >&nbsp&nbsp Third Party Data</i></h2>
+                            </div>
+                    </div>
+                    <div class="row p-t-30">
+                            
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/thirdparty.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Weather</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/thirdparty.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Location</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/thirdparty.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Open Data</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-xlg-3 ">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class=" col-lg-3 text-center p-t-30">
+                                                <a ><img src="../assets/images/pipeline/engaement.png" alt="user" class=" img-responsive" ></a>
+                                                
+                                            </div>
+                                            <div class="offset-lg-1 col-lg-8 p-t-30" >
+                                                
+                                                <input type="file" id="input-file-max-fs" class="dropify " data-height="120"  >
+                                            </div>
+                                            <div class="col-md-12 p-t-10"><h4>Attribution</h4></div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                    </div>
+                    
+                <div class="row p-t-60">
+                        <div class="col-md-12 ">
+                                <h2 id="bannertxt" class="card  text-center p-t-20 p-b-20"><i  class="fa fa-bomb " >&nbsp&nbsp Models</i></h2>
+                           </div>
+                </div>
+                <div class="row p-t-30 ">
+                    <div class="col-md-12">
+                        <div class="card">
+                            
+                            <div class="row m-lr-20 p-t-30">
+                                <!-- Column -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card">
+                                        <div id="modeling" class="row">
+                                            <div class="col-12">
+                                                <div class="social-widget">
+                                                    <div class="soc-header box-facebook">Outbonding Marketing</div>
+                                                    <div class="soc-content p-t-30  p-b-30">
+                                                        <div class="col-3 b-r-g">
+                                                            <h3 class="font-medium">2374110</h3>
+                                                            <h5 class="text-muted small">Email</h5></div>
+                                                        <div class="col-3 b-r-g">
+                                                            <h3 class="font-medium">198342</h3>
+                                                            <h5 class="text-muted small">Direct Email</h5></div>
+                                                        <div class="col-3 b-r-g">
+                                                            <h3 class="font-medium">423</h3>
+                                                            <h5 class="text-muted small">SMS</h5></div>
+                                                        <div class="col-3">
+                                                            <h3 class="font-medium">79879</h3>
+                                                            <h5 class="text-muted small">Social</h5></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="social-widget">
+                                                    <div class="soc-header box-twitter">Customer Interaction</div>
+                                                    <div class="soc-content p-t-30  p-b-30">
+                                                        <div class="col-4 b-r-g">
+                                                            <h3 class="font-medium">12</h3>
+                                                            <h5 class="text-muted small">Clientelling</h5></div>
+                                                        <div class="col-4 b-r-g">
+                                                            <h3 class="font-medium">34324</h3>
+                                                            <h5 class="text-muted small">Call Center</h5></div>
+                                                            <div class="col-4">
+                                                                <h3 class="font-medium">8745</h3>
+                                                                <h5 class="text-muted small">A/B Web</h5></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="social-widget">
+                                                    <div class="soc-header box-twitter">Decision Analytics</div>
+                                                    <div class="soc-content p-t-30  p-b-30">
+                                                        <div class="col-3 11 b-r-g">
+                                                            <h3 class="font-medium">5</h3>
+                                                            <h5 class="text-muted small">RFM</h5></div>
+                                                        <div class="col-3 b-r-g">
+                                                            <h3 class="font-medium">2101</h3>
+                                                            <h5 class="text-muted small">Sale Prediction</h5></div>
+                                                        <div class="col-3 b-r-g">
+                                                            <h3 class="font-medium">101</h3>
+                                                            <h5 class="text-muted small">Click Prediction</h5></div>
+                                                        <div class="col-3">
+                                                            <h3 class="font-medium">14286</h3>
+                                                            <h5 class="text-muted small">Personality </h5></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="card">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="social-widget">
+                                                    <div class="soc-header box-facebook">Addressable Media</div>
+                                                    <div class="soc-content p-t-30 p-b-30">
+                                                        <div class="col-4 b-r-g">
+                                                            <h3 class="font-medium">45600</h3>
+                                                            <h5 class="text-muted small">DMP</h5></div>
+                                                        <div class="col-4 b-r-g">
+                                                            <h3 class="font-medium">23000</h3>
+                                                            <h5 class="text-muted small">Retargeting</h5></div>
+                                                        
+                                                        <div class="col-4">
+                                                            <h3 class="font-medium">14596</h3>
+                                                            <h5 class="text-muted small">Ad Optimized</h4></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer"> © 2018 Aurocore by Aurocore.net </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../assets/node_modules/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="../assets/node_modules/d3/d3.min.js"></script>
+    <script src="../assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Popup message jquery -->
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+    <!-- Chart JS -->
+    <script src="../assets/node_modules/horizontal-timeline/js/horizontal-timeline.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="../assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+   $(function() {
+        // Basic
+        
+        $('.dropify').dropify({
+            messages: {
+                'default': 'CSV',
+                'replace': 'Drag and drop or click to replace',
+                'remove':  'Erase',
+                'error':   'Ooops, something wrong happended.'
+            }
+        });
+
+        $('.dropify').dropify({
+            tpl: {
+                wrap:            '<div class="dropify-wrapper"></div>',
+                loader:          '<div class="dropify-loader"></div>',
+                message:         '<div class="dropify-message"><span class="file-icon" /> <p>{{ default }}</p></div>',
+                preview:         '<div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-infos-message">{{ replace }}</p></div></div></div>',
+                filename:        '<p class="dropify-filename"><span class="file-icon"></span> <span class="dropify-filename-inner"></span></p>',
+                clearButton:     '<button type="button" class="dropify-clear">{{ remove }}</button>',
+                errorLine:       '<p class="dropify-error">{{ error }}</p>',
+                errorsContainer: '<div class="dropify-errors-container"><ul></ul></div>'
+            }
+        });
+        // Translated
+        
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+    </script>
+   <script>
+   // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+   </script>
+   
+</body>
+
+</html>

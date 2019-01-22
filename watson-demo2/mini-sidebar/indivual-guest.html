@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Aurocore - Customer Data Platform</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="../assets/node_modules/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="../assets/node_modules/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="../assets/node_modules/css-chart/css-chart.css" rel="stylesheet">
+    <!--This page css - Morris CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- page css -->
+    <link href="css/pages/widget-page.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="css/watsons_custom.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Aurocore</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="sl-icon-menu"></i></a> </li>
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="icon-Magnifi-Glass2"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                       
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down">Admin &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Business-ManWoman"></i><span class="hide-menu">Customer Profile</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-person.html">Profile</a></li>  
+                                    <li><a href="person-grouping.html">Customer Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Hipster-Glasses3"></i><span class="hide-menu">Guest Profile <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="indivual-guest.html">Guest Profile  </a></li>
+                                    <li><a href="guest-grouping.html">Guest Grouping</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Car-Wheel"></i><span class="hide-menu">Data Pipeline <span class="label label-rounded label-danger">4</span></span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="pipeline-regular-import.html">Import  </a></li>
+                                    <li><a href="pipeline-endpoint.html">Endpoint</a></li>
+                                    <li><a href="pipeline-history-model.html">History Model Report</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="icon-Double-Circle"></i><span class="hide-menu">Audience</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="audience-contact.html">Audience Segment</a></li>
+                                    <!--
+                                         <li><a href="audience-contact2.html">Audience Grid</a></li>
+                                    -->
+                                    <li><a href="person-attributes.html">Attributes</a></li>
+                                    <li><a href="person-charts.html">Analyze Chart</a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                            
+                           
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="row">
+                        <!-- Column -->
+                        <div class="col-lg-3 col-xlg-3 col-md-5">
+                            
+                            <div class="card">
+                                    
+                                <div class="card-body">
+                                        
+                                    <center class=""> 
+                                        <div class="card-body" style="margin-top:-20px;">
+                                        <a  class="btn btn-info m-b-20 p-10 btn-block waves-effect waves-light" data-toggle="modal" data-target="#searchModal" data-whatever="@mdo"><i class="mdi mdi-account-search"></i> Search</a>
+                                        
+                                        <img src="../assets/images/users/avater.png" class="img-circle m-t-10" width="150" />
+                                        <h4 class="card-title m-t-10">Guest</h4>
+                                        
+                                        
+                                    </center>
+                                </div>
+                                
+                                <div id="profile" class="card-body"> 
+                                    <h3 class="text-muted p-t-5 db">Refer </h3>
+                                    <h4> Google DoubleClick</h4>
+                                    <h3 class="text-muted p-t-5 db">Last Visit</h3>
+                                    <h4>2018/10/28</h4>
+                                    <h3 class="text-muted p-t-5 db">Site ID </h3>
+                                    <h4>auroshop.com</h4>
+                                    <h3 class="text-muted p-t-5 db">User ID</h3>
+                                    <h4>81dfdd7240209</h4>
+                                    <h3 class="text-muted p-t-5 db">Device ID</h3>
+                                    <h4>N/A</h4>
+                                    <h3 class="text-muted p-t-5 db">Analytics Visit ID</h3>
+                                    <h4>SADA^cSDADEWGT0eh&Ym</h4>
+                                    <h3 class="text-muted p-t-5 db">Country</h3>
+                                    <h4>Taiwan</h4>
+                                    <h3 class="text-muted p-t-5 db">OS</h3>
+                                    <h4>MAC</h4>
+                                    <h3 class="text-muted p-t-5 db">Browser</h3>
+                                    <h4>Chrome</h4>
+                                    <h3 class="text-muted p-t-5 db">Device</h3>
+                                    <h4>N/A</h4>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                        <!-- Column -->
+                        <div class="col-lg-9 col-xlg-9 col-md-7">
+                            <div class="card">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs profile-tab indextab" role="tablist">
+                                    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#profile-detail" role="tab">Profile</a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#timeline" role="tab">Live Stream</a> </li>
+                                   <!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Setting</a> </li>--> 
+                                    
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                        <div class="tab-pane active" id="profile-detail" role="tabpanel">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        
+                                                                <div class="col-md-3  b-l-g b-r-g">
+                                                                <h5 class="card-title">Source : DoubleClick&nbsp;&nbsp;Media: UTM00122</h5>
+                                                                <img src="../assets/images/gallery/bt_0_240_01_P1_3_e2.jpg" class=" img-rounded img-responsive" >
+                                                                </div>
+                                                               
+                                                                <div class="col-md-3 b-r-g">
+                                                                <h5 class="card-title">Source : ec.auroshup&nbsp;&nbsp; Media: Banner</h5>
+                                                                <img src="../assets/images/gallery/1509591511-4266075347.png" class=" img-rounded img-responsive" >
+                                                                </div>
+                                                                <div class="col-md-3  b-r-g">
+                                                                        <h5 class="card-title">Source : ec.auroshup&nbsp;&nbsp; Media: Top Selling </h5>
+                                                                        <img src="../assets/images/gallery/5272456_R.jpg" class=" img-rounded img-responsive" >
+                                                                </div>
+                                                                <div class="col-md-3  b-r-g">
+                                                                        <h5 class="card-title">Source : ec.auroshup&nbsp;&nbsp; Media: Related </h5>
+                                                                        <img src="../assets/images/gallery/5986217_R.jpg" class=" img-rounded img-responsive" >
+                                                                </div>
+                                            
+                                                            
+                                                        
+                                                    </div>
+                                                    <hr>
+                                                    
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                                    <h4 class="font-medium m-t-30">Category Click</h4>
+                                                                    <hr>
+                                                                    <h5 class="m-t-30">Health care <span class="pull-right">3</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width:3%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Personal care <span class="pull-right">10</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Sport <span class="pull-right">7 </span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width:7%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                  
+                                                        </div>
+                                                            
+                                                        <div class="col-md-3">
+                                                                    <h4 class="font-medium m-t-30">Category Duration</h4>
+                                                                    <hr>
+                                                                    <h5 class="m-t-30">Health care <span class="pull-right">68 Sec</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="1000" style="width:3%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Personal care<span class="pull-right">1200 Sec</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="1200" aria-valuemin="0" aria-valuemax="1000" style="width:80%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Sport <span class="pull-right">206 Sec</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="206" aria-valuemin="0" aria-valuemax="1000" style="width:12%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    
+                                                        </div>
+                                                        <div class="col-md-3">  
+                                                                <h4 class="font-medium m-t-30">Category View</h4>
+                                                                <hr>
+                                                                    <h5 class="m-t-30">Health care <span class="pull-right">15 PV</span></h5>
+                                                                        <div class="progress">
+                                                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width:15%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                        </div>
+                                                                        <h5 class="m-t-30">Personal care<span class="pull-right">26 PV</span></h5>
+                                                                        <div class="progress">
+                                                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="1200" aria-valuemin="0" aria-valuemax="100" style="width:26%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                        </div>
+                                                                        <h5 class="m-t-30">Sport <span class="pull-right">19 PV</span></h5>
+                                                                        <div class="progress">
+                                                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="206" aria-valuemin="0" aria-valuemax="100" style="width:19%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                        </div>
+                                                            </div>
+                                                        <div class="col-md-3">
+                                                                <h4 class="font-medium m-t-30">Category Scores</h4>
+                                                                <hr>
+                                                                <h5 class="m-t-30">Health care <span class="pull-right">11%</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width:11%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Personal care<span class="pull-right">56%</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="120" aria-valuemin="0" aria-valuemax="100" style="width:56%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                                    <h5 class="m-t-30">Sport <span class="pull-right">34%</span></h5>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="206" aria-valuemin="0" aria-valuemax="100" style="width:34%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                                                    </div>
+                                                        </div>
+                                                        
+
+                                                                
+                                                    </div>
+                                                    
+                                                    
+                                                    <h4 class="font-medium m-t-30">Key Performance Indicators</h4>
+                                                    <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h6 class="card-subtitle">October  2018</h6>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table stylish-table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th style="width:90px;"></th>
+                                                                                        <th>Description</th>
+                                                                                        <th>Value</th>
+                                                                                        <th>Performance</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td><span class="round"><i class="ti-key"></i></span></td>
+                                                                                        <td>
+                                                                                            <h5 class="text-muted">Session Duration</h5></td>
+                                                                                        <td>
+                                                                                            <h5>1722</h5></td>
+                                                                                        <td>
+                                                                                            <h5><i class="ti-arrows-horizontal"></i></h5></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                            <td><span class="round"><i class="ti-key"></i></span></td>
+                                                                                            <td>
+                                                                                                <h5 class="text-muted">Session Click</h5></td>
+                                                                                            <td>
+                                                                                                <h5>20</h5></td>
+                                                                                            <td>
+                                                                                                <h5><i class="ti-arrow-up"></i></h5></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                            <td><span class="round"><i class="ti-key"></i></span></td>
+                                                                                            <td>
+                                                                                                <h5 class="text-muted">Source Media</h5></td>
+                                                                                            <td>
+                                                                                                <h5>Google DoubleClick</h5></td>
+                                                                                            <td>
+                                                                                                <h5><i class="ti-arrows-horizontal"></i></h5></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                            <td><span class="round"><i class="ti-key"></i></span></td>
+                                                                                            <td>
+                                                                                                <h5 class="text-muted">Exit Page</h5></td>
+                                                                                            <td>
+                                                                                                <h5>/Sport</h5></td>
+                                                                                            <td>
+                                                                                                <h5><i class="ti-arrows-horizontal"></i></h5></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                            <td><span class="round"><i class="ti-key"></i></span></td>
+                                                                                            <td>
+                                                                                                <h5 class="text-muted">Exit Time</h5></td>
+                                                                                            <td>
+                                                                                                <h5>2018/10/28 18:57</h5></td>
+                                                                                            <td>
+                                                                                                <h5><i class="ti-arrows-horizontal"></i></h5></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="tab-pane " id="timeline" role="tabpanel">
+                                                <div class="card-body">
+                                                    
+                                                    <div class="row">
+                                                            <div class="col-lg-9 col-xlg-10 col-md-8">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                            <h4 class="card-title" id="1">2018-10-28</h4>
+                                                                            <div class="table-responsive">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>#</th>
+                                                                                                <th>Timestamp</th>
+                                                                                                <th>Log</th>
+                                                                                                <th>Duration</th>
+                                                                                                <th>Device</th>
+                                                                                                <th>Location</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>1</td>
+                                                                                                <td>2018-10-28 18:01:37</td>
+                                                                                                <td>/login</td>
+                                                                                                <td>30</td>
+                                                                                                <td>N/A</td>
+                                                                                                <td>Taipei </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>2</td>
+                                                                                                <td>2018-10-28 21:14:37</td>
+                                                                                                <td>/index</td>
+                                                                                                <td>300</td>
+                                                                                                <td>N/A</td>
+                                                                                                <td>Taipei </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>3</td>
+                                                                                                <td>2018-10-28 21:14:37</td>
+                                                                                                <td>/region/daaw</td>
+                                                                                                <td>300</td>
+                                                                                                <td>N/A</td>
+                                                                                                <td>Taipei </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>4</td>
+                                                                                                <td>2018-10-28 21:14:37</td>
+                                                                                                <td>/region/daac</td>
+                                                                                                <td>300</td>
+                                                                                                <td>N/A</td>
+                                                                                                <td>Taipei </td>
+                                                                                            </tr>
+                                                                                            
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                            </div>
+                                                                            
+                                                                        
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-xlg-2 col-md-4">
+                                                                <div class="stickyside">
+                                                                    <div class="list-group" id="top-menu">
+                                                                        <a href="#1" class="list-group-item active">Session 1</a>
+                                                                        <a href="#2" class="list-group-item">Session 2</a>
+                                                                        <a href="#3" class="list-group-item">Session 3</a>
+                                                                        <a href="#4" class="list-group-item">Session 4</a>
+                                                                        <a href="#5" class="list-group-item">Session 5</a>
+                                                                        <a href="#10" class="list-group-item">navigation--</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="tab-pane" id="settings" role="tabpanel">
+                                                <div class="card-body">
+                                                    <form class="form-horizontal form-material">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12">CookieID</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" vale="Victor Cheng" class="form-control form-control-line">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="example-email" class="col-md-12">Email</label>
+                                                            <div class="col-md-12">
+                                                                <input type="email" value="victor.cheng@gmail.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12">User ID</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" value="71dfdd5140001" class="form-control form-control-line">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="col-md-12">Onsite Date</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" value="AJ00048000" class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                        <div class="form-group">
+                                                                <label class="col-md-12">Mobile</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" placeholder="0937218547" class="form-control form-control-line">
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12">Phone No</label>
+                                                            <div class="col-md-12">
+                                                                <input type="text" value="" class="form-control form-control-line">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="col-md-12">Bill Address</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" value="台北市新生南路三段90號" class="form-control form-control-line">
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="col-md-12">Ship Address</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" value="台北市新生南路三段90號" class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12">Message</label>
+                                                            <div class="col-md-12">
+                                                                <textarea rows="5" class="form-control form-control-line"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-12">Select Country</label>
+                                                            <div class="col-sm-12">
+                                                                <select class="form-control form-control-line">
+                                                                    <option>Taiwan</option>
+                                                                    <option>India</option>
+                                                                    <option>Usa</option>
+                                                                    <option>Canada</option>
+                                                                    <option>Thailand</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-sm-12">
+                                                                <button class="btn btn-success">Update Profile</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column -->
+                </div>
+                <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="exampleModalLabel1">Customer's Key Fields</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="control-label">CookieID:</label>
+                                            <input type="text" class="form-control" id="recipient-name1">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="recipient-name" class="control-label">User ID:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Onsite Date:</label>
+                                                <input class="form-control" type="date" value="2018-10-30" id="example-date-input">
+                                        </div>
+                                       
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    
+                                    <button type="button" class="btn btn-primary">Search </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer"> © 2018 Aurocore by Aurocore.net </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../assets/node_modules/ps/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/chartist-js/dist/chartist.min.js"></script>
+    <script src="../assets/node_modules/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Chart JS -->
+    <script src="../assets/node_modules/echarts/echarts-all.js"></script>
+    <!-- Flot Charts JavaScript -->
+    <script src="../assets/node_modules/flot/excanvas.js"></script>
+    <script src="../assets/node_modules/flot/jquery.flot.js"></script>
+    <script src="../assets/node_modules/flot/jquery.flot.time.js"></script>
+    <script src="../assets/node_modules/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="js/widget-charts.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="../assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script>
+            // This is for the sticky sidebar    
+            $(".stickyside").stick_in_parent({
+                offset_top: 100
+            });
+            $('.stickyside a').on('click', function() {
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top - 100
+                }, 500);
+                return false;
+            });
+            // This is auto select left sidebar
+            // Cache selectors
+            // Cache selectors
+            var lastId,
+                topMenu = $(".stickyside"),
+                topMenuHeight = topMenu.outerHeight(),
+                // All list items
+                menuItems = topMenu.find("a"),
+                // Anchors corresponding to menu items
+                scrollItems = menuItems.map(function() {
+                    var item = $($(this).attr("href"));
+                    if (item.length) {
+                        return item;
+                    }
+                });
+        
+            // Bind click handler to menu items
+        
+        
+            // Bind to scroll
+            $(window).scroll(function() {
+                // Get container scroll position
+                var fromTop = $(this).scrollTop() + topMenuHeight - 250;
+        
+                // Get id of current scroll item
+                var cur = scrollItems.map(function() {
+                    if ($(this).offset().top < fromTop)
+                        return this;
+                });
+                // Get the id of the current element
+                cur = cur[cur.length - 1];
+                var id = cur && cur.length ? cur[0].id : "";
+        
+                if (lastId !== id) {
+                    lastId = id;
+                    // Set/remove active class
+                    menuItems
+                        .removeClass("active")
+                        .filter("[href='#" + id + "']").addClass("active");
+                }
+            });
+            </script>
+</body>
+
+</html>
